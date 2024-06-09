@@ -29,3 +29,7 @@ group :development do
 end
 
 gem "pg", "~> 1.5"
+
+gem "faker", "~> 3.4"
+
+gem "concurrent-ruby", "~> 1.3.3"

@@ -7,9 +7,6 @@ FROM ruby:$RUBY_VERSION as base
 # Set the working directory
 WORKDIR /app
 
-ENV RAILS_ENV="production" \
-    RAILS_MASTER_KEY="e44834ec2157ffd23807eae259454b03"
-
 # Copy Gemfile
 COPY Gemfile /app/Gemfile
 

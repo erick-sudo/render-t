@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  render-t:
+    build: .
+    ports:
+      - "4000:4000"
+    environment:
+      - RAILS_ENV=production
+      - DATABASE_URL=postgres://postgres_user:postgres_password@postgres-db:5432/postgres_db
+      - RAILS_MASTER_KEY=52380c0ede6bee8a48853d001689c08c
+    depends_on:
+      - postgres-db
+    networks:
+      - render_t_network
+
+  postgres-db:
+    build: db-containers/postgres
+    ports:
+      - "5434:5432"
+    environment:
+      - POSTGRES_DB=postgres_db
+      - POSTGRES_USER=postgres_user
+      - POSTGRES_PASSWORD=postgres_password
+    networks:
+      - render_t_network
+
+networks:
+  render_t_network: {}
