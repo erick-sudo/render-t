@@ -7,3 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+puts "Seeding conversations"
+(1..5).each do
+  Conversation.create! title: Faker::Lorem.sentence
+
+end
+puts "Done seeding conversations"
