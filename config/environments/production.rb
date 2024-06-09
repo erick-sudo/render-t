@@ -65,10 +65,10 @@ Rails.application.configure do
   config.hosts << "render-t-5tm8.onrender.com"
 
   # Enable DNS rebinding protection and other `Host` header attacks.
-  # config.hosts = [
-  #   "example.com",     # Allow requests from example.com
-  #   /.*\.example\.com/ # Allow requests from subdomains like `www.example.com`
-  # ]
+  config.hosts = [
+    "render-t-uuji.onrender.com",     # Allow requests from
+    /.*\.render-t-uuji.onrender\.com/ # Allow requests from subdomains
+  ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 end
