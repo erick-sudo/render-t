@@ -4,7 +4,7 @@ services:
   render-t:
     build: .
     ports:
-      - "4000:4000"
+      - "3000:3000"
     environment:
       - RAILS_ENV=production
       - DATABASE_URL=postgres://postgres_user:postgres_password@postgres-db:5432/postgres_db
